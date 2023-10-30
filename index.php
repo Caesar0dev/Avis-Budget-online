@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Terminal Command Executor</title>
+    <title>Scraping</title>
 </head>
 <body>
 
 <form method="post" action="">
-    <label for="command">Enter Command:</label>
-    <input type="text" id="command" name="command" placeholder="Enter your command">
-    <input type="submit" name="execute" value="Execute">
+    <label for="command">Enter Start Date:</label>
+    <input type="text" id="command" name="command" placeholder="2024-01">
+    <input type="submit" name="execute" value="START">
 </form>
 
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['execute'])) {
     // Check if a command is entered
     if (!empty($_POST['command'])) {
-        $command = $_POST['command'];
+        $command = "node avis.js ".$_POST['command'];
         $output = array(); // This will store the output of the command
 
         // Execute the command
