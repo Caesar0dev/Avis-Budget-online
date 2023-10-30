@@ -237,7 +237,7 @@ async function handleScraping() {
             }
         }
 
-        const files = 'avisLocation.csv';
+        const files = './avisLocation.csv';
         await processFilesSequentially(files);
 
     }
